@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bins & Windows Clean – CHF 30 in Geneva</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;600&display=swap">
+<style>
+:root{--bg:#f3f8f9;--surface:#fff;--ink:#10262f;--muted:#4b646e;--lake:#1c7c9c;--lake-d:#0f5a74;--green:#2f7d4f;--line:#cfe0e5;--on-lake:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1a20;--surface:#12262e;--ink:#e8f2f5;--muted:#9bb4bd;--lake:#4fb3d3;--lake-d:#7cc8e0;--green:#6cc08b;--line:#24404a;--on-lake:#08202a}}
+:root[data-theme="dark"]{--bg:#0b1a20;--surface:#12262e;--ink:#e8f2f5;--muted:#9bb4bd;--lake:#4fb3d3;--lake-d:#7cc8e0;--green:#6cc08b;--line:#24404a;--on-lake:#08202a}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.6 Figtree,system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.05;margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{padding:20px 0;display:flex;justify-content:space-between;align-items:center}
+.brand{font:800 1.2rem "Bricolage Grotesque",system-ui,sans-serif}
+header a.call{color:var(--lake-d);font-weight:600;text-decoration:none}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding:36px 0 56px}
+.hero h1{font-size:clamp(2.6rem,7vw,5rem);font-weight:800;letter-spacing:-.02em}
+.hero p{max-width:34em;color:var(--muted);margin:18px 0 26px}
+.btn{display:inline-block;background:var(--lake);color:var(--on-lake);font:600 1.05rem Figtree,sans-serif;padding:14px 26px;border:0;border-radius:10px;cursor:pointer;text-decoration:none}
+.btn:hover{background:var(--lake-d)}
+:focus-visible{outline:3px solid var(--lake);outline-offset:3px}
+/* window pane with squeegee wipe */
+.pane{position:relative;aspect-ratio:1/1.05;border:10px solid var(--ink);border-radius:6px;background:var(--surface);overflow:hidden;display:grid;grid-template:1fr 1fr/1fr 1fr;gap:8px;padding:0}
+.pane i{background:linear-gradient(135deg,#bfe3ee,#e9f6fa);display:block}
+.pane i:nth-child(3){background:linear-gradient(135deg,#a9d6e4,#dff1f6)}
+.pane::before{content:"";position:absolute;inset:0;z-index:2;background:rgba(120,110,95,.55);animation:wipe 2.4s .4s cubic-bezier(.6,0,.3,1) forwards;transform-origin:left}
+.pane::after{content:"CHF 30";position:absolute;z-index:3;left:50%;top:50%;transform:translate(-50%,-50%);font:800 clamp(2rem,6vw,3.4rem) "Bricolage Grotesque",sans-serif;color:var(--ink);background:var(--surface);padding:6px 18px;border-radius:8px;box-shadow:0 0 0 3px var(--ink)}
+@keyframes wipe{to{transform:translateX(101%)}}
+@media (prefers-reduced-motion:reduce){.pane::before{animation:none;display:none}}
+.band{background:var(--surface);border-block:1px solid var(--line);padding:48px 0}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.cols h3{font-size:1.4rem;margin-bottom:8px}
+.cols p{margin:0;color:var(--muted)}
+section.book{padding:56px 0 72px;display:grid;grid-template-columns:.8fr 1.2fr;gap:40px}
+section.book h2{font-size:clamp(2rem,4.5vw,3rem)}
+section.book p{color:var(--muted)}
+form{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;display:grid;gap:16px}
+label{display:grid;gap:6px;font-weight:600;font-size:.95rem}
+input,select{font:inherit;padding:12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);width:100%}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.total{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:16px;font-weight:600}
+.total b{font:800 1.8rem "Bricolage Grotesque",sans-serif}
+#done{display:none;background:var(--surface);border:2px solid var(--green);border-radius:14px;padding:24px}
+#done h3{font-size:1.6rem;color:var(--green);margin-bottom:8px}
+footer{padding:24px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+@media (max-width:760px){.hero,section.book{grid-template-columns:1fr}.cols{grid-template-columns:1fr}.pane{max-width:320px}.row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><span class="brand">Bacs &amp; Vitres Genève</span><a class="call" href="#book">Book a visit</a></header>
+<main>
+<div class="hero">
+<div>
+<h1>Clean bins and clean windows. CHF 30.</h1>
+<p>One visit, one flat price. We scrub and disinfect your household bins and wash the windows of your flat or house in Geneva, inside and out.</p>
+<a class="btn" href="#book">Book for CHF 30</a>
+</div>
+<div class="pane" role="img" aria-label="A window being wiped clean"><i></i><i></i><i></i><i></i></div>
+</div>
+</main>
+</div>
+<div class="band"><div class="wrap cols">
+<div><h3>Bins</h3><p>Up to 3 household bins (general waste, compost, recycling) scrubbed, rinsed and disinfected to remove smell and residue.</p></div>
+<div><h3>Windows</h3><p>Up to 6 standard windows washed and squeegeed streak-free, frames and sills wiped.</p></div>
+<div><h3>Geneva only</h3><p>We serve the canton of Geneva. Pick a date and we confirm a time slot by phone or message.</p></div>
+</div></div>
+<div class="wrap">
+<section class="book" id="book">
+<div>
+<h2>Book your visit</h2>
+<p>Tell us where and when. You pay CHF 30 after the work is done, by TWINT or cash.</p>
+</div>
+<div>
+<form id="f">
+<div class="row">
+<label>Name<input name="name" required autocomplete="name"></label>
+<label>Phone<input name="phone" type="tel" required autocomplete="tel" placeholder="+41 …"></label>
+</div>
+<label>Street address<input name="addr" required autocomplete="street-address" placeholder="Rue du Rhône 1"></label>
+<div class="row">
+<label>Commune
+<select name="commune" required>
+<option value="">Choose…</option><option>Genève</option><option>Carouge</option><option>Lancy</option><option>Onex</option><option>Vernier</option><option>Meyrin</option><option>Plan-les-Ouates</option><option>Thônex</option><option>Chêne-Bougeries</option><option>Cologny</option><option>Other (Geneva canton)</option>
+</select></label>
+<label>Preferred date<input name="date" type="date" required id="date"></label>
+</div>
+<div class="total"><span>Bins + windows, flat price</span><b>CHF 30</b></div>
+<button class="btn" type="submit">Request this visit</button>
+</form>
+<div id="done" role="status"><h3>Request received</h3><p id="sum"></p></div>
+</div>
+</section>
+</div>
+<footer><div class="wrap">Serving the canton of Geneva · Extra bins or windows quoted on request.</div></footer>
+<script>
+var d=document.getElementById('date');
+d.min=new Date(Date.now()+864e5).toISOString().slice(0,10);
+document.getElementById('f').addEventListener('submit',function(e){
+e.preventDefault();
+var v=new FormData(e.target);
+document.getElementById('sum').textContent='Thank you, '+v.get('name')+'. We will contact you on '+v.get('phone')+' to confirm '+v.get('date')+' at '+v.get('addr')+', '+v.get('commune')+'. Total: CHF 30.';
+e.target.style.display='none';
+document.getElementById('done').style.display='block';
+});
+</script>
+</body>
+</html>
